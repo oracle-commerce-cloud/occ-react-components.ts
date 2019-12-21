@@ -27,6 +27,7 @@
     "*.(ts|tsx)": "prettier --write"
   },
   "dependencies": {
+    "@aboulman/swr": "^0.1.15",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
   },

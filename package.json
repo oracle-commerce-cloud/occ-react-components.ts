@@ -1,0 +1,71 @@
+{
+  "name": "occ-react-components.ts",
+  "version": "0.1.1",
+  "author": "aboulmane<anassboulmane@gmail.com>",
+  "homepage": "https://github.com/oracle-commerce-cloud/occ-react-components.ts.git",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:oracle-commerce-cloud/occ-react-components.ts.git"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "react-app-rewired build",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "start": "react-app-rewired start",
+    "start:dev": "NODE_LOCAL=true PORT=9001 react-app-rewired start"
+  },
+  "proxy": "https://www.discoverkidult.com/",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.(ts|tsx)": "prettier --write"
+  },
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.7.0",
+    "@types/jest": "^24.0.22",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.3",
+    "@welldone-software/why-did-you-render": "^3.3.8",
+    "customize-cra": "^0.8.0",
+    "husky": "^3.1.0",
+    "jquery": "^3.4.1",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "lint-staged": "^9.5.0",
+    "path": "^0.12.7",
+    "prettier": "^1.18.2",
+    "react-app-rewired": "^2.1.4",
+    "react-scripts": "3.1.2",
+    "typescript": "^3.7.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack-build-notifier": "^2.0.0"
+  },
+  "webpackConfig": {
+    "entries": {
+      "occreactcomponent.widget": "./src/entries/OccReactComponent.tsx"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

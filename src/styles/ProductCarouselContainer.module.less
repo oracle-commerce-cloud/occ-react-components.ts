@@ -1,0 +1,34 @@
+
+/* ---------------------------------------------------------------------- */
+/*	Blank Widget Styles
+/* ---------------------------------------------------------------------- */
+
+// Use class rather than id to allow multiple
+// instances of this widget on a single page.
+
+.container {
+  padding-top: 40px;
+}
+
+.questionRow {
+  text-align: center;
+}
+
+.questionCol {
+  float: none;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  & > div {
+    position: relative;
+  }
+
+  @media (min-width: 768px) {
+    margin: auto !important;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

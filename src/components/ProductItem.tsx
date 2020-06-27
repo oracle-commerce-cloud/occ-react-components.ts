@@ -32,7 +32,7 @@ export const ProductItem = ({ product, ...props }: any) => {
 
         {xlinea && (
           <div className="product__line-img">
-            <img src={`/file/general/${xlinea}.png`} alt={xlinea} />
+            <img className={style.collection} src={`/file/general/${xlinea}.png`} alt={xlinea} />
           </div>
         )}
         {displayName && (

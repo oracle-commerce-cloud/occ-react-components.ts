@@ -2,7 +2,6 @@
   "name": "occ-react-components.ts",
   "version": "0.1.1",
   "author": "aboulmane<anassboulmane@gmail.com>",
-  "homepage": "https://github.com/oracle-commerce-cloud/occ-react-components.ts.git",
   "repository": {
     "type": "git",
     "url": "git@github.com:oracle-commerce-cloud/occ-react-components.ts.git"
@@ -45,6 +44,7 @@
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "lint-staged": "^9.5.0",
+    "occ-webpack-plugin": "^1.0.6",
     "path": "^0.12.7",
     "prettier": "^1.18.2",
     "react-app-rewired": "^2.1.4",

@@ -1,17 +1,17 @@
-const path = require("path");
-const webpack = require("webpack");
+const path = require('path')
+const webpack = require('webpack')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const WebpackNotifierPlugin = require('webpack-build-notifier');
+const WebpackNotifierPlugin = require('webpack-build-notifier')
+const WebpackOnBuildPlugin = require('occ-webpack-plugin')
 
-const { createWebpackEntries } = require("./utils");
-const { webpackConfig } = require("../package");
+const { createWebpackEntries } = require('./utils')
+const { webpackConfig } = require('../package')
 
 const resolve = (dir) => path.resolve(__dirname, '..', dir)
 
-
 module.exports = (config, env) => {
-  const isEnvLocal = !process.env.NODE_LOCAL;
-  const isEnvProduction = config.mode === "production";
+  const isEnvLocal = !process.env.NODE_LOCAL
+  const isEnvProduction = config.mode === 'production'
 
   const EXCLUDED_PLUGINS = [
     'InlineChunkHtmlPlugin',
@@ -28,7 +28,7 @@ module.exports = (config, env) => {
         ? []
         : ['HtmlWebpackPlugin']
     ),
-  ];
+  ]
 
   const requireWebpackHotDevClient = (
     isEnvProduction
@@ -37,15 +37,15 @@ module.exports = (config, env) => {
   )
 
   const MAIN_CHUNK_ENTRIES = createWebpackEntries(
-    isEnvLocal ? webpackConfig : { entries: { "index": "./src/index.tsx" }},
-    requireWebpackHotDevClient
-  );
+    isEnvLocal ? webpackConfig : { entries: { 'index': './src/index.tsx' } },
+    requireWebpackHotDevClient,
+  )
 
   return ({
     ...config,
     mode: config.mode,
     entry: MAIN_CHUNK_ENTRIES,
-    devtool: isEnvProduction ? "none" : "eval-source-map",
+    devtool: isEnvProduction ? 'none' : 'eval-source-map',
     output: {
       ...config.output,
       ...(
@@ -94,8 +94,8 @@ module.exports = (config, env) => {
           test: /\.js(\?.*)?$/i,
           uglifyOptions: {
             compress: {
-              drop_console: true
-            }
+              drop_console: true,
+            },
           },
         }),
       ],
@@ -134,7 +134,12 @@ module.exports = (config, env) => {
             new WebpackNotifierPlugin(),
             // new FriendlyErrorsWebpackPlugin(),
           ]
-          : config.plugins.filter(item => !EXCLUDED_PLUGINS.includes(item.constructor.name))
+          : [
+            ...config.plugins.filter(item => !EXCLUDED_PLUGINS.includes(item.constructor.name)),
+            new WebpackOnBuildPlugin({
+              platform: resolve('platform'),
+            }),
+          ]
       ),
       // new BundleAnalyzerPlugin(),
     ],

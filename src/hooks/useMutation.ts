@@ -1,4 +1,4 @@
-import { mutate } from "@aboulman/swr";
+import { mutate } from "swr";
 import { useCallback, useContext } from "react";
 import { RequireContext } from "../context/RequireContext";
 import { UseApiFetcher } from "../types/UseApi";

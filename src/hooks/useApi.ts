@@ -1,4 +1,4 @@
-import useSWR, { ConfigInterface } from "@aboulman/swr";
+import useSWR, { ConfigInterface } from "swr";
 import { useContext } from "react";
 import { RequireContext } from "../context/RequireContext";
 import { UseApiFetcher } from "../types/UseApi";

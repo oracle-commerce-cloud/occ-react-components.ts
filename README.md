@@ -13,6 +13,8 @@ In the project directory and after running:
 $ cp .env.exemple .env
 ```
 
+<img src="https://raw.githubusercontent.com/oracle-commerce-cloud/occ-webpack-plugin/dev/screencast.svg"  alt="npm run build" style="max-width:100%;">
+
 you can run:
 
 ### `npm start:dev`
@@ -48,8 +50,15 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
-You will need to use the `DCU` to manually deploy the files and supplementary bundles after the first extension installations.
-I am currently working on a deployment task which will come in a later version.
+~You will need to use the `DCU` to manually deploy the files and supplementary bundles after the first extension installations.
+I am currently working on a deployment task which will come in a later version.~
+
+Currently, you can deploy your project in this way
+
+```
+$ cd platform
+$ npx dcu -k $KTEST -n $NTEST -x .
+```
 
 ### `npm run eject`
 
@@ -63,8 +72,11 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 
 ## Related
- [leedium/occ-shared-resource-bundles](https://github.com/leedium/occ-shared-resource-bundles "occ-shared-resource-bundles") <br/>
- [leedium/occ-react-component](https://github.com/leedium/occ-react-component "occ-react-component")
+* [create-occ-react-app](https://github.com/oracle-commerce-cloud/create-occ-react-app "occ-react-scripts") and [occ-react-scripts](https://www.npmjs.com/package/occ-react-scripts "occ-react-scripts")
+* [occ-react-components.ts](https://github.com/oracle-commerce-cloud/occ-react-components.ts "occ-react-components.ts")
+* [Design-Code-Utility](https://www.npmjs.com/package/@oraclecc/dcu "dcu")
+* [leedium/occ-shared-resource-bundles](https://github.com/leedium/occ-shared-resource-bundles "occ-shared-resource-bundles")
+* [leedium/occ-react-component](https://github.com/leedium/occ-react-component "occ-react-component")
 
 ## Learn More
 

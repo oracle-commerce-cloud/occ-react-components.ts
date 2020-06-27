@@ -1,5 +1,5 @@
 import $ from "jquery";
-import { miRestClientFactory, MiRestClientService } from "../helpers/miRestClientService";
+import { restClientFactory, RestClient } from "../helpers/restClient";
 import { resources } from "./snippets/ns.customreactwidget2.json";
 
 export const occDependencies = {
@@ -48,18 +48,18 @@ export const model = {
   },
 };
 
-let $RestClient: MiRestClientService;
-let miRestClient: MiRestClientService;
+let $RestClient: RestClient;
+let ocRestClient: RestClient;
 
 export const propsFactory = () => {
   const { ccRestClient } = occDependencies;
-  $RestClient = $RestClient || miRestClientFactory($);
-  miRestClient = miRestClient || miRestClientFactory(ccRestClient);
+  $RestClient = $RestClient || restClientFactory($);
+  ocRestClient = ocRestClient || restClientFactory(ccRestClient);
 
   return {
     model,
     $RestClient,
-    miRestClient,
+    ocRestClient,
     ...model,
     ...occDependencies,
   };

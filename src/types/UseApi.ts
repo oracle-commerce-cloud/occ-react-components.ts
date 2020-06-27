@@ -1,12 +1,12 @@
-import { MiRestClientService } from "../helpers/miRestClientService";
+import { RestClient } from "../helpers/restClient";
 
 export interface UseApiFetcherParams {
   url?: string;
   params?: any;
   data?: any;
   ccConstants: any;
-  miRestClient: MiRestClientService;
-  $RestClient: MiRestClientService;
+  ocRestClient: RestClient;
+  $RestClient: RestClient;
 }
 
 export type UseApiFetcher<T> = (useApiConfig: UseApiFetcherParams) => Promise<T>;

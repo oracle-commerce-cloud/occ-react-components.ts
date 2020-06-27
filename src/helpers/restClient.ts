@@ -1,4 +1,6 @@
-export interface MiRestClientEndpoint {
+import { CCDependencies } from "../types";
+
+export interface ocRestClientEndpoint {
   url: string;
   type?: string;
   method?: string;
@@ -8,11 +10,11 @@ export interface MiRestClientEndpoint {
   headers?: any;
 }
 
-export interface MiRestClientService {
-  request(options: { endpoint: string | MiRestClientEndpoint; data?: any; params?: any }): Promise<any>;
+export interface RestClient {
+  request(options: { endpoint: string | ocRestClientEndpoint; data?: any; params?: any }): Promise<any>;
 }
 
-export const miRestClientFactory = (httpClient: any): MiRestClientService => {
+export const restClientFactory = (httpClient: any): RestClient => {
   return {
     request({ endpoint, data, params }): Promise<any> {
       return new Promise((resolve, reject) => {
@@ -38,5 +40,19 @@ export const miRestClientFactory = (httpClient: any): MiRestClientService => {
         }
       });
     },
+  };
+};
+
+let $RestClient: RestClient;
+let ocRestClient: RestClient;
+
+export const httpClientsFactory = (occDependencies: CCDependencies) => {
+  const { ccRestClient, $ } = occDependencies;
+  $RestClient = $RestClient || restClientFactory($);
+  ocRestClient = ocRestClient || restClientFactory(ccRestClient);
+
+  return {
+    $RestClient,
+    ocRestClient,
   };
 };

@@ -4,7 +4,7 @@ import { RequireContext } from "../context/RequireContext";
 import { UseApiFetcher } from "../types/UseApi";
 
 export function useApi<T>(key: any, fetcher: UseApiFetcher<T>, config?: ConfigInterface) {
-  const { ccConstants, $RestClient, miRestClient } = useContext(RequireContext);
+  const { ccConstants, $RestClient, ocRestClient } = useContext(RequireContext);
 
-  return useSWR(key, (url, params) => fetcher({ ccConstants, $RestClient, miRestClient, url, params }), config);
+  return useSWR(key, (url, params) => fetcher({ ccConstants, $RestClient, ocRestClient, url, params }), config);
 }

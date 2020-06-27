@@ -1,0 +1,10 @@
+{
+  "widgetType": "OccReactComponent",
+  "version": 1,
+  "displayName": "OccReactCdomponent",
+  "source": 101,
+  "i18nresources": "occreactcomponent",
+  "elementized": false,
+  "global": false,
+  "javascript": "occreactcomponent"
+}

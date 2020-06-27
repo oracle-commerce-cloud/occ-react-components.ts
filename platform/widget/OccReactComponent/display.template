@@ -1,0 +1,3 @@
+<div class="ReactComponent">
+  <div data-bind="onRender: onRender.bind($data), attr:{id: 'react-'+ $data.id()}" ></div>
+</div>

@@ -23,3 +23,12 @@ jobs:
           yarn build
         env:
           CI: true
+
+      - name: push to platform
+        run: |
+          cd platform
+          npx dcu -k $KTEST -n $NTEST -x .
+        env:
+          CI: true
+          KTEST: ${{ secrets.KTEST }}
+          NTEST: ${{ secrets.NTEST }}

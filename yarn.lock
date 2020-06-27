@@ -1353,10 +1353,10 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@oraclecc/dcu@^1.6.0":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@oraclecc/dcu/-/dcu-1.6.0.tgz#737bdd0c1fb5a13ea91f25b43f7c5ab35f9cd5e4"
-  integrity sha512-j8hvEuQJR4ei7QzxmLPcV4srolHr62Xejilk3uBIxxQ1s2g/fLggRugzxWsdo0y0ZN3EoefWenXPZbT8eBk4qQ==
+"@oraclecc/dcu@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@oraclecc/dcu/-/dcu-1.9.0.tgz#299104d1bcb753b43334b66ee2098263ff6da67f"
+  integrity sha512-XjNtuMfEKAXH5rrbbCm/V4U6TnRXQf2eD1LrXReupGtWq5g4qkd3bBY9xZOra6Ao0rW29zoVw+xmHd8b8E3wkg==
   dependencies:
     bluebird "3.4.6"
     chalk "1.1.3"

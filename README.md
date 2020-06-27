@@ -1,5 +1,8 @@
 # OCC-React-Components.ts
-Standalone Starter React Component for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud").  
+
+![Node CI](https://github.com/oracle-commerce-cloud/occ-react-components.ts/workflows/Node%20CI/badge.svg)
+
+Standalone Starter React Component for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud").
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

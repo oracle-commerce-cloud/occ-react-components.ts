@@ -23,6 +23,9 @@ export const propsFactory = ({ occDependencies, model }: CCProps): IRequireConte
   };
 };
 
-export const RequireWidgetContext = ({ occDependencies, model, render }: any) => (
-  <Provider value={propsFactory({ occDependencies, model })}>{render && render()}</Provider>
+export const RequireWidgetContext = ({ occDependencies, model, children }: any) => (
+  <Provider value={propsFactory({ occDependencies, model })}>
+    {children && typeof children === "function" && children()}
+    {children && typeof children !== "function" && children}
+  </Provider>
 );

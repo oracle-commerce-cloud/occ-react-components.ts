@@ -1,9 +1,9 @@
-# OCC-React-Components.ts
+# occ-react-components.ts using [occ-react-scripts](https://www.npmjs.com/package/occ-react-scripts "occ-react-scripts")
 
 ![Node CI](https://github.com/oracle-commerce-cloud/occ-react-components.ts/workflows/Node%20CI/badge.svg)
 
 Standalone Starter React Component for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud").
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project bootstrapped with [Create React App](https://github.com/oracle-commerce-cloud/create-occ-react-app) and [occ-react-scripts](https://www.npmjs.com/package/occ-react-scripts "occ-react-scripts").
 
 ## Available Scripts
 
@@ -17,15 +17,15 @@ $ cp .env.exemple .env
 
 you can run:
 
-### `npm start:dev`
+### `npm start`
 
 Runs the app in the development mode.<br>
-Open [https://localhost:9001](https://localhost:9001) to view it in the browser.
+Open [https://localhost:9000](https://localhost:9000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm start`
+### `npm start --debuggingProxy`
 
 Runs the app in the development mode.<br>
 Open [https://localhost:9000](https://localhost:9000) to view it in the browser.
@@ -33,11 +33,6 @@ Open [https://localhost:9000](https://localhost:9000) to view it in the browser.
 You will be able to use any web proxy that supports mapping files both locally and remotely. The webpack dev server is configured to run on `https://localhost:9000` so you will need to configure your proxy mappings.
 
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run format`
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
@@ -59,6 +54,10 @@ Currently, you can deploy your project in this way
 $ cd platform
 $ npx dcu -k $KTEST -n $NTEST -x .
 ```
+
+### `npm run format`
+
+format your code using prettier
 
 ### `npm run eject`
 

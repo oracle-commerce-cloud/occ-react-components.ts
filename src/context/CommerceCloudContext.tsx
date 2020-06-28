@@ -2,16 +2,16 @@ import React, { Context, createContext } from "react";
 import { httpClientsFactory, RestClient } from "../helpers/restClient";
 import { CCDependencies, CCModel, CCProps } from "../types";
 
-interface IRequireContext extends CCDependencies, CCModel {
+interface ICommerceCloudContext extends CCDependencies, CCModel {
   model: CCModel;
   $RestClient: RestClient;
   ocRestClient: RestClient;
 }
 
-export const RequireContext = createContext<IRequireContext | {}>({}) as Context<IRequireContext>;
-export const { Provider } = RequireContext;
+export const CommerceCloudContext = createContext<ICommerceCloudContext | {}>({}) as Context<ICommerceCloudContext>;
+export const { Provider } = CommerceCloudContext;
 
-export const propsFactory = ({ occDependencies, model }: CCProps): IRequireContext => {
+export const propsFactory = ({ occDependencies, model }: CCProps): ICommerceCloudContext => {
   const { $RestClient, ocRestClient } = httpClientsFactory(occDependencies);
 
   return {

@@ -1,7 +1,7 @@
 import $ from "jquery";
 import React from "react";
 
-import { Provider } from "../context/RequireContext";
+import { Provider } from "../context/CommerceCloudContext";
 import { ProductCarousel } from "./ProductCarousel";
 
 import { propsFactory } from "../mocks/Props";

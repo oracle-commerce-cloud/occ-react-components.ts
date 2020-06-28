@@ -5,7 +5,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import { ProductCarousel } from "../containers/ProductCarousel";
-import { RequireWidgetContext } from "../context/RequireContext";
+import { RequireWidgetContext } from "../context/CommerceCloudContext";
 import { CCModel, CCProps } from "../types";
 
 define([

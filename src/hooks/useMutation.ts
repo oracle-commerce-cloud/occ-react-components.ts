@@ -1,10 +1,10 @@
 import { mutate } from "swr";
 import { useCallback, useContext } from "react";
-import { RequireContext } from "../context/RequireContext";
+import { CommerceCloudContext } from "../context/CommerceCloudContext";
 import { UseApiFetcher } from "../types/UseApi";
 
 export function useMutation<T>(key: any, fetcher: UseApiFetcher<T>) {
-  const { ccConstants, $RestClient, ocRestClient } = useContext(RequireContext);
+  const { ccConstants, $RestClient, ocRestClient } = useContext(CommerceCloudContext);
 
   const mutateCallback = useCallback(
     (url?: string, data?: any, params?: any): any => async () => {

@@ -21,6 +21,7 @@ jobs:
         run: |
           yarn install
           yarn build
+          yarn start --smoke-test
         env:
           CI: true
 

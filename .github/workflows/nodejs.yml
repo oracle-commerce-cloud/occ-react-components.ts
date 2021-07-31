@@ -26,6 +26,7 @@ jobs:
           CI: true
 
       - name: push to platform
+        continue-on-error: true
         run: |
           cd platform
           npx dcu -k $KTEST -n $NTEST -x .
